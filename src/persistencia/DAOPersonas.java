@@ -68,11 +68,10 @@ public class DAOPersonas {
 
 	public List<VOPersona> listarMayores(int edad) {
 	    manager = factory.createEntityManager();
-	    List<VOPersona> lista = null;
+	    List<VOPersona> lista = new ArrayList<>();
 	    try {
 	        Query query = manager.createNamedQuery("Persona.porEdad", Persona.class).setParameter("edad", edad);
 	        List<Persona> personas = query.getResultList();
-	        lista = new ArrayList<>();
 	        for (Persona persona : personas) {
 	            lista.add(new VOPersona(persona));
 	        }
