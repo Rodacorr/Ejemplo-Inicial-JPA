@@ -11,11 +11,11 @@ public class VOPersona {
         this.edad = persona.getEdad();
 	}
 	
-	public VOPersona(int id, String nombre, int edad) {
+	/*public VOPersona(int id, String nombre, int edad) {
 	    this.id = id;
 	    this.nombre = nombre;
 	    this.edad = edad;
-	}
+	}*/
 	
 	public int getId () {
 		return id;
