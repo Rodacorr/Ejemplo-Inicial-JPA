@@ -14,8 +14,8 @@ import logica.Persona;
 import logica.VOPersona;
 
 public class DAOPersonas {
-	EntityManagerFactory factory = null;
-	EntityManager manager = null;
+	private EntityManagerFactory factory = null;
+	private EntityManager manager = null;
 	
 	public DAOPersonas() {
 		factory = Persistence.createEntityManagerFactory("Principal");
@@ -70,8 +70,7 @@ public class DAOPersonas {
 	    manager = factory.createEntityManager();
 	    List<VOPersona> lista = null;
 	    try {
-	        Query query = manager.createNamedQuery("Persona.porEdad", Persona.class)
-	            .setParameter("edad", edad);
+	        Query query = manager.createNamedQuery("Persona.porEdad", Persona.class).setParameter("edad", edad);
 	        List<Persona> personas = query.getResultList();
 	        lista = new ArrayList<>();
 	        for (Persona persona : personas) {
