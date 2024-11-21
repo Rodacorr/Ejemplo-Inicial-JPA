@@ -14,7 +14,7 @@ public class Principal {
 		//TEST
         List<VOPersona> mayores = fachada.listarMayores(5);
         for (VOPersona persona : mayores) {
-            System.out.println(persona.getId() + " - " + persona.getNombre() + " - " + persona.getEdad());
+            System.out.println(" CEDULA: " + persona.getId() + ", NOMBRE: " + persona.getNombre() + ", EDAD: " + persona.getEdad());
         }
 	}
 }
